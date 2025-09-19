@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Tech Store</title>
+  <!-- Link external stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">IT Tech Store</div>
+    <nav id="navbar">
+      <ul>
+        <li><a href="#products" class="nav-link">Products</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Dark Mode Toggle -->
+    <button id="dark-toggle" class="dark-btn">🌙</button>
+
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">☰</div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero fade-in">
+    <h2>Latest Tech at Your Fingertips</h2>
+    <p>Shop laptops, smartphones, tablets & accessories.</p>
+    <a href="#products" class="btn">Shop Now</a>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="fade-in">
+    <h2>Our Products</h2>
+    <div class="products">
+      <div class="card">
+        <img src="./images/laptop.jpg" alt="Laptop">
+        <h3>Laptop</h3>
+        <p>Powerful laptops for work & play starting at R5999,99.</p>
+      </div>
+      <div class="card">
+        <img src="./images/phone.jpg" alt="Smartphone">
+        <h3>Smartphone</h3>
+        <p>Stay connected with the latest smartphones from R1999,99.</p>
+      </div>
+      <div class="card">
+        <img src="./images/tablet.jpg" alt="Tablet">
+        <h3>Tablet</h3>
+        <p>Portable tablets for entertainment & productivity from R2299,99.</p>
+      </div>
+      <div class="card">
+        <img src="./images/accessories.jpg" alt="Accessories">
+        <h3>Accessories</h3>
+        <p>Headphones, chargers & more starting at just R699,99.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="abou" class="fade-in">
+    <h2>About Us</h2>
+    <p>
+    IT Tech Store was founded to bring the latest and most innovative electronic devices to tech enthusiasts, professionals, and everyday users alike. Our carefully curated selection includes high-performance laptops, cutting-edge smartphones, versatile tablets, and essential accessories, all chosen for quality, reliability, and performance.
+    We strive to make technology shopping simple, offering clear product information, competitive pricing, and seamless online purchasing. 
+    Customer satisfaction is our top priority, with responsive support, fast shipping, and helpful guides to ensure every user gets the most out of their devices.
+    Whether you're a gamer, a student, or a professional, IT Tech Store is your one-stop destination for discovering, learning about, and purchasing technology that empowers your digital life.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="fade-in">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 IT Tech Store. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
