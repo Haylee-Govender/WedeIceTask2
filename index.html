@@ -4,90 +4,158 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IT Tech Store</title>
-  <!-- Link external stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <!-- Header -->
   <header>
     <div class="logo">IT Tech Store</div>
-    <nav id="navbar">
+    <nav>
       <ul>
+        <li><a href="#hero" class="nav-link">Home</a></li>
         <li><a href="#products" class="nav-link">Products</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
-
-    <!-- Dark Mode Toggle -->
     <button id="dark-toggle" class="dark-btn">🌙</button>
-
-    <!-- Hamburger -->
     <div class="hamburger" id="hamburger">☰</div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero fade-in">
-    <h2>Latest Tech at Your Fingertips</h2>
-    <p>Shop laptops, smartphones, tablets & accessories.</p>
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <h2>Welcome to IT Tech Store</h2>
+    <p>Your one-stop shop for electronics</p>
     <a href="#products" class="btn">Shop Now</a>
   </section>
 
-  <!-- Products Section -->
+  <!-- Products -->
   <section id="products" class="fade-in">
     <h2>Our Products</h2>
-    <div class="products">
-      <div class="card">
-        <img src="./images/laptop.jpg" alt="Laptop">
-        <h3>Laptop</h3>
-        <p>Powerful laptops for work & play starting at R5999,99.</p>
+
+    <!-- Categories -->
+    <div class="products categories">
+      <div class="card category" data-category="laptops">
+        <img src="images/laptop.jpg" alt="Laptops">
+        <h3>Laptops</h3>
       </div>
-      <div class="card">
-        <img src="./images/phone.jpg" alt="Smartphone">
-        <h3>Smartphone</h3>
-        <p>Stay connected with the latest smartphones from R1999,99.</p>
+      <div class="card category" data-category="phones">
+        <img src="images/phone.jpg" alt="Phones">
+        <h3>Phones</h3>
       </div>
-      <div class="card">
-        <img src="./images/tablet.jpg" alt="Tablet">
-        <h3>Tablet</h3>
-        <p>Portable tablets for entertainment & productivity from R2299,99.</p>
+      <div class="card category" data-category="tablets">
+        <img src="images/tablet.jpg" alt="Tablets">
+        <h3>Tablets</h3>
       </div>
-      <div class="card">
-        <img src="./images/accessories.jpg" alt="Accessories">
+      <div class="card category" data-category="accessories">
+        <img src="images/accessories.jpg" alt="Accessories">
         <h3>Accessories</h3>
-        <p>Headphones, chargers & more starting at just R699,99.</p>
+      </div>
+    </div>
+
+    <!-- Laptops -->
+    <div class="product-list" id="laptops">
+      <button class="back-btn">← Back to Categories</button>
+      <div class="card">
+        <img src="images/Laptop1.jpg" alt="Laptop">
+        <h3>Macbook Pro</h3>
+        <p>Powerful laptop with Intel i7, 16GB RAM, 512GB SSD.</p>
+        <p><strong>R22 000,00</strong></p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+      <div class="card">
+        <img src="images/Laptop2.jpg" alt="Laptop">
+        <h3>Apple Macbook</h3>
+        <p>Intel core i5, 8GB RAM, 256GB SSD</p>
+        <p><strong>R16 000,00</strong></p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+    </div>
+
+    <!-- Phones -->
+    <div class="product-list" id="phones">
+      <button class="back-btn">← Back to Categories</button>
+      <div class="card">
+        <img src="images/Iphone.jpg" alt="Phone">
+        <h3>SmartPhone </h3>
+        <p>iPhone 16 Pro Max 256GB <p>
+        <p><strong>R25 500,00</strong></p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+      <div class="card">
+        <img src="images/samsung.jpg" alt="Phone">
+        <h3>SmartPhone </h3>
+        <p>Samsung A15</p>
+        <p><strong>R2500,00</strong></p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+    </div>
+
+    <!-- Tablets -->
+    <div class="product-list" id="tablets">
+      <button class="back-btn">← Back to Categories</button>
+      <div class="card">
+        <img src="images/tablet1.jpg" alt="Tablet">
+        <h3>Tab Apple/h3>
+        <p>Pad Air 13-inch WiFi 128GB Apple M3 </p>
+        <p><strong>R16 000,00</strong></p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+      <div class="card">
+        <img src="images/tablet2.jpg" alt="Tablet">
+        <h3>Tab Samsung</h3>
+        <p>Samsung Galaxy Tab S2 9.7" 32GB Tablet - Android 5.0</p>
+        <p><strong>R6000,00</strong></p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+    </div>
+
+    <!-- Accessories -->
+    <div class="product-list" id="accessories">
+      <button class="back-btn">← Back to Categories</button>
+      <div class="card">
+        <img src="images/jbl.jpg" alt="Headphones">
+        <h3>JBL Headphones</h3>
+        <p>Immersive sound with wireless comfort.</p>
+        <p><strong>R1000, 00</strong></p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+      <div class="card">
+        <img src="images/earbuds.jpg" alt="Smartwatch">
+        <h3>Air Pods</h3>
+        <p>Bluetooth wireless earbuds with active noise cancellation.</p>
+        <p><strong>R400,00</strong></p>
+        <a href="#" class="btn">Add to Cart</a>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="abou" class="fade-in">
+  <!-- About -->
+  <section id="about" class="fade-in">
     <h2>About Us</h2>
-    <p>
-    IT Tech Store was founded to bring the latest and most innovative electronic devices to tech enthusiasts, professionals, and everyday users alike. Our carefully curated selection includes high-performance laptops, cutting-edge smartphones, versatile tablets, and essential accessories, all chosen for quality, reliability, and performance.
+    <p>IT Tech Store was founded to bring the latest and most innovative electronic devices to tech enthusiasts, professionals, and everyday users alike. Our carefully curated selection includes high-performance laptops, cutting-edge smartphones, versatile tablets, and essential accessories, all chosen for quality, reliability, and performance.
     We strive to make technology shopping simple, offering clear product information, competitive pricing, and seamless online purchasing. 
     Customer satisfaction is our top priority, with responsive support, fast shipping, and helpful guides to ensure every user gets the most out of their devices.
     Whether you're a gamer, a student, or a professional, IT Tech Store is your one-stop destination for discovering, learning about, and purchasing technology that empowers your digital life.
-    </p>
+</p>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact" class="fade-in">
     <h2>Contact Us</h2>
     <form class="contact-form">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit" class="btn">Send</button>
     </form>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 IT Tech Store. All rights reserved.</p>
+    <p>&copy; 2025 IT Tech Store. All Rights Reserved.</p>
   </footer>
-
-  <!-- JavaScript -->
-  <script src="js/script.js"></script>
+  <div id="toast"></div>
 </body>
 </html>

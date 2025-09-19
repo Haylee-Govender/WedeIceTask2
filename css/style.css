@@ -275,3 +275,71 @@ body.dark footer {
     font-size: 0.9rem;
   }
 }
+/* Product lists hidden by default */
+.product-list {
+  display: none;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-list.active {
+  display: grid;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Back button */
+.back-btn {
+  grid-column: 1 / -1;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: left;
+  transition: background-COLOR 0.3s;
+}
+
+.back-btn:hover {
+  background: #1e40af;
+}
+
+/* Category cards */
+.categories .card {
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.categories .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+/* Toast Notification */
+#toast {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 1rem;
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  font-size: 1rem;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.5s, bottom 0.5s;
+}
+
+#toast.show {
+  visibility: visible;
+  opacity: 1;
+  bottom: 50px;
+}
+
+

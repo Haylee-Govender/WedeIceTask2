@@ -87,3 +87,57 @@ window.addEventListener("load", () => {
     darkToggle.textContent = "☀️";
   }
 });
+// Category filter system with Back button
+const categoryCards = document.querySelectorAll(".category");
+const productLists = document.querySelectorAll(".product-list");
+const categoriesContainer = document.querySelector(".categories");
+const backButtons = document.querySelectorAll(".back-btn");
+
+categoryCards.forEach(card => {
+  card.addEventListener("click", () => {
+    const category = card.getAttribute("data-category");
+
+    // Hide categories, show chosen product list
+    categoriesContainer.style.display = "none";
+    productLists.forEach(list => list.classList.remove("active"));
+    document.getElementById(category).classList.add("active");
+
+    // Smooth scroll
+    document.getElementById(category).scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+// Back to categories
+backButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    productLists.forEach(list => list.classList.remove("active"));
+    categoriesContainer.style.display = "grid";
+    categoriesContainer.scrollIntoView({ behavior: "smooth" });
+  });
+});
+// Toast Notification Function
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.className = "show";
+
+  // Hide after 3 seconds
+  setTimeout(() => {
+    toast.className = toast.className.replace("show", "");
+  }, 3000);
+}
+
+// Add to Cart buttons
+const addToCartBtns = document.querySelectorAll(".btn");
+
+addToCartBtns.forEach(btn => {
+  if (btn.textContent.includes("Add to Cart")) {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault(); // Prevent page jump
+      const productName = btn.parentElement.querySelector("h3").textContent;
+      showToast(`${productName} added to cart 🛒`);
+    });
+  }
+});
+
+
